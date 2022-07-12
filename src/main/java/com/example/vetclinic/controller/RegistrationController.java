@@ -31,7 +31,7 @@ public class RegistrationController {
         try{
             User registered = userService.registerNewUserAccount(userDto);
         }catch (UserAccountExistException uaeEx){
-            mav.addObject("message", "An account for that username/email already exists.");
+//            mav.addObject("message", "An account for that username/email already exists.");
         }
 
         return new ModelAndView("successRegister", "user", userDto);
